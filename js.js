@@ -10,18 +10,15 @@ fetch('https://dwaapi.juvasquez88.vercel.app/letters')
          a=leaguesJson.letters[i]
         var btn = document.createElement("BUTTON");
         btn.innerHTML = a.letter;
-        document.body.appendChild(btn);
+        btn.id=a.letter;
+        btn.getElementById=btn.id;
+        console.log(a.image);
+        btn.onclick =imagen(a.image)
+        document.getElementById("contenedor").innerHTML=document.getElementById("contenedor").innerHTML+"<button id='' type='button' onclick='imagen(" + '"' + a.image + '"' + ");'>"+ a.letter+"</button>"
 
-
-        var img = document.createElement("img");
-        img.src = a.image;
-        console.log(a.image)
-        document.body.appendChild(img);
-        
-    
     }
 
-    
+
 
   })
   .catch(err => {
@@ -30,3 +27,8 @@ fetch('https://dwaapi.juvasquez88.vercel.app/letters')
   .finally(() =>  { isLoading = false })
 
 console.log(isLoading)
+
+function imagen(id){
+    document.getElementById('img').style.backgroundImage="url(" + id + ")";
+
+}
