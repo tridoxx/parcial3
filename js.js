@@ -14,7 +14,7 @@ fetch('https://dwaapi.juvasquez88.vercel.app/letters')
         btn.getElementById=btn.id;
         console.log(a.image);
         btn.onclick =imagen(a.image)
-        document.getElementById("contenedor").innerHTML=document.getElementById("contenedor").innerHTML+"<button id='' type='button' onclick='imagen(" + '"' + a.image + '"' + ");'>"+ a.letter+"</button>"
+        document.getElementById("contenedor").innerHTML=document.getElementById("contenedor").innerHTML+"<button id='boton' type='button' onclick='imagen(" + '"' + a.image + '"' + ");'>"+ a.letter+"</button>"
 
     }
 
